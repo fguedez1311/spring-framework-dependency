@@ -10,11 +10,9 @@
         <constructor-arg ref="miInforme"></constructor-arg>
 
     </bean>
+    <bean id="miSecretarioEmpleado" class="com.fguedez.SecretarioEmpleado" >
+        <property name="informeNuevo" ref="miInforme"></property>
 
-
-
-
-
-    <!-- more bean definitions go here -->
+    </bean>
 
 </beans>

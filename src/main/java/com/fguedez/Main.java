@@ -1,6 +1,6 @@
 package com.fguedez;
 
-import org.springframework.context.ApplicationContext;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -13,9 +13,9 @@ public class Main
     {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        IEmpleados empl1= context.getBean("miEmpleado",IEmpleados.class);
-        System.out.println(empl1.getTareas());
-        System.out.println(empl1.getInforme());
+        IEmpleados empl2= context.getBean("miSecretarioEmpleado",IEmpleados.class);
+        System.out.println(empl2.getTareas());
+        System.out.println(empl2.getInforme());
         context.close();
 
     }
