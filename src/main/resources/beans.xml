@@ -8,10 +8,15 @@
     <bean id="miInforme" class="com.fguedez.Informe"></bean>
     <bean id="miEmpleado" class="com.fguedez.DirectorEmpleado" >
         <constructor-arg ref="miInforme"></constructor-arg>
+        <property name="email" value="directivo@pildorasinformaticas.es"></property>
+        <property name="nombreEmpresa" value="Pildoras Infomáticas"></property>
 
     </bean>
     <bean id="miSecretarioEmpleado" class="com.fguedez.SecretarioEmpleado" >
         <property name="informeNuevo" ref="miInforme"></property>
+
+        <property name="email" value="secretaria@pildorasinformaticas.es"></property>
+        <property name="nombreEmpresa" value="Pildoras Infomáticas"></property>
 
     </bean>
 

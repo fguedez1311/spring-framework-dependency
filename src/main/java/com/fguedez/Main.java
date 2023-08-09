@@ -13,9 +13,20 @@ public class Main
     {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        IEmpleados empl2= context.getBean("miSecretarioEmpleado",IEmpleados.class);
-        System.out.println(empl2.getTareas());
-        System.out.println(empl2.getInforme());
+        DirectorEmpleado Juan= context.getBean("miEmpleado",DirectorEmpleado.class);
+        System.out.println(Juan.getTareas());
+        System.out.println(Juan.getInforme());
+        System.out.println("Email: "+Juan.getEmail());
+        System.out.println(Juan.getNombreEmpresa());
+
+       /* SecretarioEmpleado Maria= context.getBean("miSecretarioEmpleado",SecretarioEmpleado.class);
+        SecretarioEmpleado Pablo= context.getBean("miSecretarioEmpleado",SecretarioEmpleado.class);
+        System.out.println(Maria.getTareas());
+        System.out.println(Maria.getInforme());
+        System.out.println("Email: "+Maria.getEmail());
+        System.out.println(Maria.getNombreEmpresa());
+        System.out.println("Email de Pablo: "+Pablo.getEmail());*/
+
         context.close();
 
     }
