@@ -25,6 +25,16 @@ public class DirectorEmpleado implements IEmpleados {
     public DirectorEmpleado(CreacionInformes informeNuevo ){
         this.informeNuevo=informeNuevo;
     }
+    // Método init. Ejecutar tareas antes de que bean esté disponible
+    public void metodoInicial(){
+        System.out.println("Dentro del método init. Aqui irian las tareas ejecuta antes de que el bean esté listo");
+    }
+     public void metodoFinal(){
+        System.out.println("Dentro del método destroy. Aqui irian las tareas ejecuta despues de utilizar el bean");
+    }
+
+
+    //método destroy.Ejecutar tarea desques de que el bean haya sid ejecutado
     public String getTareas(){
         return "Getionar la plantilla de la empresa ";
     }
